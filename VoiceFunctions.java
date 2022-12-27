@@ -12,7 +12,7 @@ import vText.vTextClass;
 
 /**
 *
-* @author Ken
+* @author Satyam
 */
 public class VoiceFunctions extends DecryptOrNew{
     
