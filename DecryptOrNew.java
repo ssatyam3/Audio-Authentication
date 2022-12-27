@@ -9,19 +9,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
-*
-* @author Adam Earley
-*/
+
 public class DecryptOrNew extends EncryptDecrypt {
-    /**
-     *
-     * @param name
-     * @param newFile
-     * @throws FileNotFoundException
-     * @throws IOException
-     * @throws Throwable
-     */
+ 
     public static void encryptNew(String name, File newFile)throws FileNotFoundException, IOException, Throwable{
         FileInputStream fis = new FileInputStream(newFile);
         FileOutputStream fos = new FileOutputStream(name + "E.txt");
@@ -32,14 +22,7 @@ public class DecryptOrNew extends EncryptDecrypt {
         cleanUpFirstTxt(name);
         }
     
-    /**
-     *
-     * @param name
-     * @param newFile
-     * @throws FileNotFoundException
-     * @throws IOException
-     * @throws Throwable
-     */
+
     public static void encryptNewAudio(String name, File newFile)throws FileNotFoundException, IOException, Throwable{
         FileInputStream fis = new FileInputStream(newFile);
         FileOutputStream fos = new FileOutputStream(name + "E.wav");
@@ -49,14 +32,7 @@ public class DecryptOrNew extends EncryptDecrypt {
         fos.close();
         }
     
-    /**
-     * Returns a decrypted file from an encrypted file
-     * @param match
-     * @param name
-     * @return
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
+
     public static File ReturnDecrypted(boolean match, String name) throws FileNotFoundException, IOException
     {
         FileInputStream fis2 = new FileInputStream(name + "E.txt");
@@ -76,12 +52,7 @@ public class DecryptOrNew extends EncryptDecrypt {
         return decryptedFile;
     }
     
-    /**
-     *
-     * @param name
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
+
     public static void DecryptAudio(String name) throws FileNotFoundException, IOException
     {
         FileInputStream fis2 = new FileInputStream(name + "E.wav");
@@ -97,7 +68,6 @@ public class DecryptOrNew extends EncryptDecrypt {
         
     /**
      * Deletes un-encrypted files
-     * @param name
      */
     public static void cleanUpFirstTxt(String name){           
             File newPassFile = new File(name + ".txt");
@@ -106,7 +76,7 @@ public class DecryptOrNew extends EncryptDecrypt {
     
     /**
      *
-     * @param name
+     * 
      */
     public static void cleanUpFirstAudio(String name){
             File newSample = new File(name + ".wav");
@@ -117,7 +87,7 @@ public class DecryptOrNew extends EncryptDecrypt {
     
      /**
      *
-     * @param name
+     * 
      */
     public static void cleanUp(String name){
             File decrypted = new File("decrypted.txt");            
