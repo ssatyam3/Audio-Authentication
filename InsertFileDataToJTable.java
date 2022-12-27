@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.Vector;
 
 /**
- *
- * @author Ken
  */
 public class InsertFileDataToJTable{
 
@@ -15,7 +13,6 @@ private Vector<Vector<String>> myVector = new Vector<Vector<String>>();
 
     /**
      *
-     * @param Username
      */
     public InsertFileDataToJTable(String Username) {
     
