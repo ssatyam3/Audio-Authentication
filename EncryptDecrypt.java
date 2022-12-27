@@ -15,7 +15,7 @@ import javax.crypto.spec.DESKeySpec;
 
 /**
  *
- * @author DudeManDeuce
+ * 
  */
 public class EncryptDecrypt{
 
@@ -25,34 +25,18 @@ public class EncryptDecrypt{
     protected static String key = "AdamKenOwenCIS111B";
 
     /**
-     *
-     * @param key
-     * @param is
-     * @param os
-     * @throws Throwable
      */
     public static void encrypt(String key, InputStream is, OutputStream os) throws Throwable {
     encryptOrDecrypt(key, Cipher.ENCRYPT_MODE, is, os);
 }
 
     /**
-     *
-     * @param key
-     * @param is
-     * @param os
-     * @throws Throwable
      */
     public static void decrypt(String key, InputStream is, OutputStream os) throws Throwable {
     encryptOrDecrypt(key, Cipher.DECRYPT_MODE, is, os);
 }
 
     /**
-     *
-     * @param key
-     * @param mode
-     * @param is
-     * @param os
-     * @throws Throwable
      */
     public static void encryptOrDecrypt(String key, int mode, InputStream is, OutputStream os) throws Throwable {
 
@@ -73,10 +57,6 @@ public class EncryptDecrypt{
 }
 
     /**
-     *
-     * @param is
-     * @param os
-     * @throws IOException
      */
     public static void doCopy(InputStream is, OutputStream os) throws IOException {
     byte[] bytes = new byte[64];
